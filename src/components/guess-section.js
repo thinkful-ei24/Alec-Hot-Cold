@@ -6,10 +6,9 @@ import './guess-section.css';
 
 export default function GuessSection(props) {
     return (
-        <section>
-            <h2 id="feedback">{props.feedback}</h2>
-            <GuessForm />
-        </section>
+      <section>
+        <h2 id="feedback">{props.feedback}</h2>
+        <GuessForm onMakeGuess={guess => props.onMakeGuess(guess)} />
+      </section>
     );
 }
-
